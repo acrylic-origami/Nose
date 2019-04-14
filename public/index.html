@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('load', e => {
+				const socket = io();
+				socket.emit('handshake', 'A');
+				socket.on('data', console.log);
+			});
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
