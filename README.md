@@ -13,7 +13,7 @@ MuseBLE = {
 		Promise<[main_service: noble.Service, ctrl: noble.Characteristic]> // 
 	],
 	send_command: function(ctrl: noble.Characteristic, cmd: string, no_response: bool = true),
-	FFT: function(uuid: string, FFT_WINDOW: number = 128, EDMSE_DECAY: number = 0.2): Promise<Observable<[]>>, // one Observable per channel; Promise encapsulates the connection logic
+	FFT: function(uuid: string, FFT_WINDOW: number = 128, EDMSE_DECAY: number = 0.2): Promise<Array<Observable<dspjs.FFT>>>, // one Observable per channel; Promise encapsulates the connection logic
 }
 ```
 
